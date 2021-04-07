@@ -27,21 +27,17 @@ public class JoinProcess extends HttpServlet {
 		String email= request.getParameter("email");
 		
 		Member member= new Member(id, password, name, age, gender, email);
-//		System.out.println("member :"+member);
 		service.InsertMember(member);
 		
 		HttpSession session = request.getSession();
-		Member mem =(Member)session.getAttribute("mem");
-		String s =mem.getId();
-		System.out.println("s :"+s);
-//		if(mem.getId().equals("admin")) {
-////		response.sendRedirect("memberList");
-//			request.getRequestDispatcher("memberList").forward(request, response);
-//		}
-//		request.getRequestDispatcher("loginForm.jsp").forward(request, response);
-		request.getRequestDispatcher("admin/main.jsp").forward(request, response);
-////		response.sendRedirect("main.jsp");
-		
+		String mem =(String)session.getAttribute("id");
+//		System.out.println("mem :"+mem);		
+
+		if(mem=="admin") {
+			request.getRequestDispatcher("memberList").forward(request, response);
+		}else {
+		request.getRequestDispatcher("loginForm.jsp").forward(request, response);
+		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

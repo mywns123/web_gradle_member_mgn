@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원 관리 시스템 로그인 페이지</title>
-<link rel="stylesheet" href="css/loginForm.css">
+<link rel="stylesheet" href="<%-- <%=request.getContextPath() %> --%>css/loginForm.css">
 </head>
 <body>
 	<form name="loginform" action="loginProcess" method="post">

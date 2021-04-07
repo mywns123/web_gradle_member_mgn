@@ -30,7 +30,7 @@ public class LoginProcess extends HttpServlet {
 		Member loginMember = new Member(id, password);
 		Member result = service.loginMember(loginMember);
 		
-		System.out.printf("loginMember : %s,%n result: %s", loginMember,result);
+//		System.out.printf("loginMember : %s,%n result: %s", loginMember,result);
 		
 		if(result != null) {
 			HttpSession session = request.getSession();

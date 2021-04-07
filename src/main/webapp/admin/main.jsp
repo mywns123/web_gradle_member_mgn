@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<form name="logout" action="../logoutServlet" method="get">
+	<form name="logout" action="/web_gradle_member_mgn//logoutServlet" method="get">
 	<h3>${id}로 로그인 하셨습니다.</h3>
 	<c:if test="${id eq 'admin'}">
 		<a href = "/web_gradle_member_mgn/memberList">관리자 모드 접속(회원 목록 보기)</a>

@@ -36,7 +36,9 @@
 	</tbody>
 	<tfoot>
 	<tr>
-	<td><a href="joinForm.jsp">추가하기</a></td>	
+	<td><a href="joinForm.jsp">추가하기</a></td>
+	<td><a href = "logoutServlet">로그아웃</a></td>
+		
 	</tr>
 	</tfoot>	
 	</table>	
